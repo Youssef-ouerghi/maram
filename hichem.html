@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function verif() {
+        if (f.x.value.length == 0) {
+          alert("zone text est vide!!!!");
+          return false;
+        }
+      }
+      function verif() {
+        var x = f.x.value;
+        if (isNaN(x) || x.length != 8 || x.indexof(" ") != -1) {
+          alert("x doirt etre composée de 8 chiffres");
+          return false;
+        }
+      }
+      function verif() {
+        var x = f.x.value;
+        if (isNaN(x) || x < 15 || x > 55) {
+          alert("x veuillez saisir une valeur dans [15,55]");
+          return false;
+        }
+      }
+      //   adresse email
+      function verif() {
+        var x = document.f.x.value;
+        var nb = 0;
+        for (i = 0; i < x.length; i++) {
+          if (x.charAt(i) == "@") nb++;
+        }
+        if (nb != 1) {
+          alert("entrée non valide!!!");
+          return false;
+        }
+      }
+      function verif() {
+        var x = f.x.value;
+        if (x.indexof("@") == -1 || x.indexof("@") != x.lastindexof("@")) {
+          alert("entrée non valide!!");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="f" onsubmit="return verif()">
+      TXT:<input name="x" /><br />
+      <input type="submit" value="valaider"
+    </form>
+  </body>
+</html>
